@@ -1,0 +1,90 @@
+
+.discuss_projects{
+  .container {
+    .row {
+      .col-xl-12 {
+        .project_text {
+          &.text-center {
+
+            // MUG COFFEE
+
+            .canvas {
+            	display: flex;
+            	align-items: center;
+            	justify-content: center;
+            	overflow: hidden;
+              background: $title;
+
+              @media #{$mobile_device}, #{$large_mobile} {
+                margin: -50px 100px 10px 10px;
+              }
+              @media #{$tablet_device } {
+                margin: -100px 150px 0px 0px;
+              }
+              @media #{$mid_device} {
+                margin: -100px 200px 0px 0px;
+              }
+              @media #{$large_device} {
+                margin: -100px 150px 0px 0px;
+              }
+              @media #{$extra_big_screen} {
+                margin: -100px 250px 0px 0px;
+              }
+            }
+
+            .video {
+            	--height: 800;
+              opacity: 0.5;
+            	mix-blend-mode: screen;
+            	height: 100vmin;
+            	width: auto;
+            	top: calc(-165 / var(--height) * 100vmin);
+            	transform: translate(calc(100 / var(--height) * 100vmin), calc(-50 / var(--height) * 100vmin));
+            	position: relative;
+
+            }
+
+            .svg {
+            	position: absolute;
+            	width: 100%;
+              margin: none;
+            	height: 100vh;
+            }
+          }
+        }
+      }
+    }
+  }
+// END MUG COFFEE
+
+    background: $title;
+    padding: 150px 0 50px 0;
+    @media #{$mobile_device} {
+        padding: 50px 0 50px 0;
+    }
+    @media #{$tablet_device} {
+        padding: 100px 0 50px 0;
+    }
+    .project_text{
+        h3{
+            color: #fff;
+            font-size: 50px;
+            font-weight: 700;
+            @media #{$mobile_device} {
+                font-size: 38px;
+            }
+        }
+        p{
+            color: #fff;
+            font-size: 15px;
+            line-height: 28px;
+            margin-bottom: 30px;
+            margin-top: 12px;
+        }
+        a{
+
+        }
+
+
+    }
+}
