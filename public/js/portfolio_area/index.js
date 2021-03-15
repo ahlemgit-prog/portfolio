@@ -26,6 +26,5 @@
 
      $.get('portfolio.php', function(reponse){
        $('#hobbies').html(reponse).slideToggle(1500);
-    $('#loisirs').fadeIn(200); 
      });
    });
