@@ -40,7 +40,7 @@ $(function() {
 			if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
 			} else {
-				$(formMessages).text('Oops! Une erreur s"est produite et votre message n"a pas pu être envoyé.');
+				$(formMessages).text('Oops! Une erreur s"est produite et votre message n\'a pas pu être envoyé.');
 			}
 		});
 	});

@@ -8,9 +8,9 @@ $(document).ready(function(){
         return this.optional(element) || /^\bcat\b$/.test(value)
     }, "Veuillez encoder la bonne réponse");
 
-    // validate contactForm form
+    // validate mc-embedded-subscribe-form form
     $(function() {
-        $('#contactForm').validate({
+        $('#mc-embedded-subscribe-form').validate({
             rules: {
                 name: {
                     required: true,
@@ -58,10 +58,10 @@ $(document).ready(function(){
                 $(form).ajaxSubmit({
                     type:"POST",
                     data: $(form).serialize(),
-                    url:"contact_process.php",
+                    url:"https://gmail.us1.list-manage.com/subscribe/post?u=e258f2c790beb560c7583457b&amp;id=5aa8caa585",
                     success: function() {
-                        $('#contactForm :input').attr('disabled', 'disabled');
-                        $('#contactForm').fadeTo( "slow", 1, function() {
+                        $('#mc-embedded-subscribe-form :input').attr('disabled', 'disabled');
+                        $('#mc-embedded-subscribe-form').fadeTo( "slow", 1, function() {
                             $(this).find(':input').attr('disabled', 'disabled');
                             $(this).find('label').css('cursor','default');
                             $('#success').fadeIn()
@@ -70,7 +70,7 @@ $(document).ready(function(){
                         })
                     },
                     error: function() {
-                        $('#contactForm').fadeTo( "slow", 1, function() {
+                        $('#mc-embedded-subscribe-form').fadeTo( "slow", 1, function() {
                             $('#error').fadeIn()
                             $('.modal').modal('hide');
 		                	$('#error').modal('show');
