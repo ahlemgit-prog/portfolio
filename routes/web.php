@@ -134,6 +134,8 @@ Route::group(['prefix' => 'admin'], function () {
 
 // ROUTES DES BLOGS ----------------------------------------
 
+use App\Http\Controllers\BlogController;
+
 Route::get('/news1.html', function () {
     return view('blogs.news._index');
 });
@@ -147,8 +149,6 @@ Route::get('/news3.html', function () {
 });
 
 
-
-use App\Http\Controllers\BlogController;
 // LISTE D'UN BLOG
 // PATTERN: /blogs
 // CTRL: BlogController
@@ -170,6 +170,8 @@ use App\Http\Controllers\BlogController;
 
 
 // ROUTES DES PAGES ----------------------------------------
+use App\Http\Controllers\PageController;
+
 Route::get('/portfolio.html', function () {
     return view('pages.portfolios._index');
 });
@@ -182,7 +184,7 @@ Route::get('/projets2.html', function () {
     return view('pages.projets._index1');
 });
 
-use App\Http\Controllers\PageController;
+
 // LISTE D'UNE PAGE
 // PATTERN: /pages
 // CTRL: PageController
@@ -223,6 +225,7 @@ Route::get('/tags/{tag}/{slug}', [TagController::class, 'show'])
 
 
 // ROUTES DES CATEGORIES ----------------------------------------
+
 use App\Http\Controllers\CategorieController;
 // LISTE D'UNE CATEGORIE
 // PATTERN: /categories
@@ -245,6 +248,7 @@ Route::get('/categories/{categorie}/{slug}', [CategorieController::class, 'show'
 
 //ROUTES DES COMMENTAIRES ---------------------------------------
 use App\Http\Controllers\CommentaireController;
+
 // LISTE D'UN COMMENTAIRE
 // PATTERN: /commentaires
 // CTRL: CommentaireController
@@ -282,11 +286,13 @@ Route::get('/authors/{author}/{slug}', [AuthorController::class, 'show'])
 
 // ROUTES DES CONTACTS ----------------------------------------
 
+use App\Http\Controllers\ContactController;
+
 Route::get('/contact.html', function () {
     return view('template.contact');
 });
 
-// use App\Http\Controllers\ContactController;
+
 
 // LISTE D'UN CONTACT
 // PATTERN: /contacts
@@ -294,10 +300,10 @@ Route::get('/contact.html', function () {
 // ACTION: index
 Route::get('/contacts', [ContactController::class, 'contacts_.index'])->name('contacts._index');
 
-// DETAILS D'UN CONTACT
-// PATTERN: contacts/contact/slug
-// CTRL: /contacts/{contact}/{slug}
-// ACTION: show
+// // DETAILS D'UN CONTACT
+// // PATTERN: contacts/contact/slug
+// // CTRL: /contacts/{contact}/{slug}
+// // ACTION: show
 Route::get('/contacts/{contact}/{slug}', [ContactController::class, 'show'])
     ->where([
       'contact'   => '[1-9][0-9]*',
