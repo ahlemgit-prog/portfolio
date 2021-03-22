@@ -70,7 +70,9 @@
                           Il suffit simplement d'associer les formes et les couleurs pour représenter une image de nos souvenirs d'enfance ou associer l'ensemble pour représenter une forme qui nous est familier. <br>
                           La famille Simpson est-elle au grand complet ?
                         </p>
-                        <img src="img/blog/simpsons.png" alt="#">
+                        <div>
+                            <img class="img-fluid" src="img/blog/simpsons.png" alt="#">
+                        </div>
                      </div>
                   </div>
                </div>
