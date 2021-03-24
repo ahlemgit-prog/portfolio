@@ -9,8 +9,8 @@
                 <div class="row align-items-center">
                     <div class="col-xl-3 col-lg-2">
                         <div class="logo">
-                            <a href="index.html">
-                                <img src="img/logo.png" alt="index.html" class="logo">
+                            <a href="accueil.html">
+                                <img src="img/logo.png" alt="accueil.html" class="logo">
                             </a>
                         </div>
                     </div>
